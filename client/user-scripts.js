@@ -7,7 +7,7 @@ function userSignUp() { 
     let userEmail = document.getElementById('emailSignup').value;
     let userPass = document.getElementById('pwdSignup').value;
     let newUserData = { user: { email: userEmail, password: userPass } };
-    console.log('NEWUSERDATA ==> ${newUserData.user.email} ${newUserData.user.password}')
+    console.log(`NEWUSERDATA ==> ${newUserData.user.email} ${newUserData.user.password}`)
 
 
     fetch('http://localhost:3000/user/create', {

@@ -2,8 +2,8 @@
  *** DISPLAY BY USER ***
  ************************** */
 function displayMine() { 
-    const accesToken = localStorage.getItem('SessionToken')
-    fetch('http://localhost:3000/journal/mine', {
+    const accessToken = localStorage.getItem('SessionToken');
+    fetch("http://localhost:3000/journal/mine", {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

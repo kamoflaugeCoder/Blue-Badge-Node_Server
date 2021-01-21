@@ -10,7 +10,7 @@ function postJournal() { 
     const accessToken = localStorage.getItem('SessionToken')
     let newEntry = { journal: { title: title, date: date, entry: entry } }
         // console.log('postJournal Function Called')
-
+    console.log(accessToken)
     fetch('http://localhost:3000/journal/create', {
             method: 'POST',
             headers: new Headers({
