@@ -29,6 +29,14 @@ sequelize.sync();
 app.use(require('./middleware/headers'));
 app.use(express.json());
 
+// All OPTIONS requests return a simple status: 'OK'
+app.options('*', (req, res) => {
+    res.json({
+        status: 'OK'
+    });
+});
+
+
 
 app.use('/user', user);
 
